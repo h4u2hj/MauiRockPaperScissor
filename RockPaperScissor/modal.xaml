@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissor.modal"
+             Title="modal"
+             Shell.PresentationMode="ModalAnimated">
+    <VerticalStackLayout
+        BackgroundColor="Azure"
+        Spacing="10">
+        <Label
+            Margin="0,30"
+            Text="Rock Paper Scissor&#10;Game Rule"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Style="{StaticResource Headline}" />
+
+        <Label
+            Margin="20,10,15,20"
+            LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="1. " FontAttributes="Bold" FontSize="Medium" />
+                    <Span Text="Choose Your Move: Select Rock, Paper, or Scissors. &#10;" FontSize="Medium" />
+                    <Span Text=" &#10;2. " FontAttributes="Bold" FontSize="Medium" />
+                    <Span Text="Compare Moves: &#10;" FontSize="Medium" />
+                    <Span
+                        Text="   - Rock crushes Scissors. &#10;   - Scissors cut Paper. &#10;   - Paper covers Rock. &#10;"
+                        FontSize="Medium" />
+                    <Span Text=" &#10;3. " FontAttributes="Bold" FontSize="Medium" />
+                    <Span Text="Determine the Winner: &#10;" FontSize="Medium" />
+                    <Span
+                        Text="   - If your move beats your opponent's, you win! &#10;   - If both moves are the same, it's a tie. &#10;"
+                        FontSize="Medium" />
+                    <Span Text=" &#10;4. " FontAttributes="Bold" FontSize="Medium" />
+                    <Span Text="Play Again: Tap your new move to start a new round and have fun!" FontSize="Medium" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Image
+            Margin="0,5,0,20"
+            Source="rockpaperscissors.png"
+            HeightRequest="200" />
+
+        <Label
+            Text="Swipe down to close"
+            HorizontalOptions="Center"
+            FontSize="18"
+            WidthRequest="170"
+            Background="#00000000"
+            TextColor="Purple" />
+
+        <VerticalStackLayout.GestureRecognizers>
+            <SwipeGestureRecognizer
+                Direction="Down"
+                Swiped="SwipeGestureRecognizer_OnSwiped" />
+        </VerticalStackLayout.GestureRecognizers>
+
+    </VerticalStackLayout>
+</ContentPage>

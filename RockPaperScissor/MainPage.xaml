@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissor.MainPage"
+             BackgroundColor="{StaticResource hatterszin}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Reset Game"
+            Order="Primary"
+            IconImageSource="reset.png"
+            Clicked="OnResetClicked" />
+        <ToolbarItem 
+            Text="Game Rules"
+            IconImageSource="info_icon.png"
+            Order="Primary"
+            Clicked="OnRulesClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0" >
+
+            <!--<Button 
+                Margin="0,5,0,0"
+                Text="Game Rules" 
+                Clicked="OnRulesClicked"    
+                HorizontalOptions="Center"
+                WidthRequest="105"
+                Background="#00000000"
+                BorderColor="Purple"
+                TextColor="Purple"
+                BorderWidth="2"
+            />-->
+            
+            <Label
+                Padding="0,20,0,0"
+                Text="Computer Choice"
+                x:Name="ComputerChoice"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+            <Image
+                Margin="0,30,0,0"
+                x:Name="CompImage"
+                Source="robot.png"
+                HeightRequest="100"
+                WidthRequest="100"
+                Aspect="AspectFit"/>
+            
+            <HorizontalStackLayout
+                Margin="0,40,0,30"
+                HeightRequest="50" HorizontalOptions="CenterAndExpand">
+                
+                <Label
+                    Text="Player Score: 0" 
+                    x:Name="PlayerScore"
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="Start"
+                    FontSize="Medium"/>
+
+                <Label
+                    Margin="60,0,0,0"
+                    Text="Computer Score: 0" 
+                    x:Name="ComputerScore"
+                    HorizontalTextAlignment="End"
+                    FontSize="Medium"
+                    HorizontalOptions="End"/>
+            </HorizontalStackLayout>
+               
+            
+            <Label
+                Margin="0,0,0,0"
+                Text="Your Choice"
+                x:Name="YourChoice"
+                Style="{StaticResource Headline}"/>
+
+            <Image
+                Margin="0,30,0,20"
+                Source="singleplayer.png"
+                x:Name="YourImage"
+                HeightRequest="100"
+                WidthRequest="100"
+                Aspect="AspectFit" />
+            
+            <Button
+                Margin="10,10,10,10"
+                Padding="0,0,0,0"
+                x:Name="RockBtn"
+                Text="ROCK" 
+                Clicked="OnRockClicked"
+                HorizontalOptions="Fill"/>
+            <Button
+                Margin="10,10,10,10"
+                Padding="0,0,0,0"                x:Name="PaperBtn"
+                Text="PAPER" 
+                Clicked="OnPaperClicked"
+                HorizontalOptions="Fill"/>
+            <Button
+                Margin="10,10,10,0"
+                Padding="0,0,0,0"                x:Name="ScissorBtn"
+                Text="SCISSOR" 
+                Clicked="OnScissorClicked"
+                HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

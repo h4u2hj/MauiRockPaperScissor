@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RockPaperScissor.Scoreboard"
+             Title="Scoreboard"
+             BackgroundColor="{StaticResource hatterszin}">
+
+    <VerticalStackLayout>
+        <Label
+            Margin="0,18,0,0"
+            Text="Scoreboard!"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Style="{StaticResource Headline}" />
+
+        <Button
+            x:Name="setButton"
+            Margin="0,20,0,20"
+            Text="Set players"
+            Clicked="OnSetPClicked"
+            HorizontalOptions="Center"
+            WidthRequest="100"
+            Background="#00000000"
+            BorderColor="Purple"
+            TextColor="Purple"
+            BorderWidth="2" />
+
+
+        <Grid
+            x:Name="board">
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="RockPaperScissor.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:RockPaperScissor"
+    Shell.FlyoutBehavior="Disabled"
+    Title="RockPaperScissor">
+
+    <TabBar>
+        <ShellContent
+        Icon="singleplayer.png"
+        Title="Single-Player"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        <ShellContent
+            Icon="twoplayer.png"
+            Title="Two-player"
+            ContentTemplate="{DataTemplate local:TwoPlayer}"
+            Route="TwoPlayer" />
+        <ShellContent
+            Icon="scoreboard.png"
+            Title="Scoreboard"
+            ContentTemplate="{DataTemplate local:Scoreboard}"
+            Route="Scoreboard" />
+    </TabBar>
+    
+
+</Shell>
